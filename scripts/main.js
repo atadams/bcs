@@ -1,0 +1,1 @@
+Checkbix.init(),$(document).ready(function(){$("#for-me-yes").hide(),$("#for-me-no").hide(),$("#for-me input[name*=risk-q]").change(function(){var e={yes:0,no:0};$("#for-me input[name*=risk-q]:checked").each(function(){e[this.value]++}),e.yes+e.no==7&&(e.yes>0?($("#for-me-yes").hide(),$("#for-me-no").show()):($("#for-me-no").hide(),$("#for-me-yes").show()))})});
