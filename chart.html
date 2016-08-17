@@ -193,7 +193,11 @@
 						}
 
 
-						function setNarrationText(narrationText, delay = 500) {
+						function setNarrationText(narrationText, delay) {
+							if (delay === undefined) {
+								delay = 500;
+							}
+
 							d3Narration
 								.transition()
 								.duration(500)
@@ -383,7 +387,11 @@
 						}
 
 
-						function moveCohort(cohort, delay=0) {
+						function moveCohort(cohort, delay) {
+							if (delay === undefined) {
+								delay = 0;
+							}
+
 							var cohortNodes = findCohort("noScreening");
 							cohortNodes.forEach(function(d) {
 								d3.selectAll("circle#" + d.id)
